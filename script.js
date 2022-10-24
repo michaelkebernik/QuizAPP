@@ -49,4 +49,48 @@ let questions = [
         "answer_4": "AppleScript",
         "right_answer": 4
     },
-]
+];
+
+
+let currentQuestion = 0;
+
+
+function init(){
+    document.getElementById('arrayLenght').innerHTML = questions.length;
+
+    showQuestion();
+}
+
+
+function showQuestion(){
+let question = questions[currentQuestion];
+quizQuestion(question);
+
+}
+
+
+function quizQuestion(i){
+    document.getElementById('quizAsk').innerHTML = i['question'];
+    document.getElementById('answerOne').innerHTML = i['answer_1'];
+    document.getElementById('answerTwo').innerHTML = i['answer_2'];
+    document.getElementById('answerThree').innerHTML = i['answer_3'];
+    document.getElementById('answerFour').innerHTML = i['answer_4'];
+}
+
+
+function answer(selection){
+    let question= questions[currentQuestion];
+    let questionNumber = selection.slice(-1);
+    let answerNumber = question['right_answer'];
+
+    console.log(questionNumber);
+    console.log(answerNumber);
+
+    if (questionNumber == answerNumber) {
+        console.log('richtige Antwort')
+    }else{
+        console.log('Falsche Antwort')
+    }
+
+}
+
