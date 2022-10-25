@@ -12,7 +12,9 @@ body{
 }
 
 .card-img-top{
-    height: 20vh;
+    height: 35vh;
+    object-fit:contain; 
+	width: 100%; 
 }
 
 .quiz-card{
@@ -30,4 +32,26 @@ body{
 .quiz-answer:hover{
     cursor: pointer;
     background-color: rgba(0,0,0,0.05);
+}
+
+.bg-success, .bg-danger {
+    color: white;
+}
+
+.width-100 {
+    width: 100%;
+}
+
+.text-center{
+    text-align: center;
+}
+
+.quizEnd{
+    font-size: x-large;
+}
+
+.button-row{
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
