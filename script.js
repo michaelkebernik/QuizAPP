@@ -172,7 +172,7 @@ function resetAnswerButtons() {
 function restartGame() {
     document.getElementById('headerImage').src = 'img/quiz.png';  //Anfangs Bild
     document.getElementById('endScreen').style = 'display: none';  // Div wird entfernt
-    document.getElementById('questionBody').style = '';  //Div mit Fragen werden hinzugefügt
+    document.getElementById('questionBody').style = '';  //Div mit Fragen werden eingeblendet
     currentQuestion = 0;  //Aktuelle Frage wird wieder auf 0 gesetzt
     rightQuestions = 0;  //Zähler richtige Frage wird auf 0 gesetzt
     init();  // Initalisierung Start
